@@ -1,0 +1,61 @@
+{
+    "lu": "CSalesContractJudge",
+    "key": "CONTRACT_JUDGE_NO=ZHTP201300082^REVISION=1^",
+    "line": 17,
+    "step": 80,
+    "title": "分包合同评审",
+    "subitems": [
+        {
+            "id": "general",
+            "en": "general:",
+            "zh": "概述:"
+        }, 
+        {
+            "id": "Purchase Detail",
+            "en": "Purchase Detail:",
+            "zh": "采购包明细:"
+        }
+    ],
+    "general": [
+        {
+            "en": "Contract Name:",
+            "zh": "合同名称:",
+            "data": "安哥拉卡玛库巴农场项目犁、茎干粉碎机、整地机和播种机设备采购合同"
+        },
+        {
+            "en": "Project Name:",
+            "zh": "项目名称:",
+            "data": "安哥拉卡玛库巴综合农场项目"
+        },
+        {
+            "en": "Supplier Name:",
+            "zh": "供应商名称:",
+            "data": "黑龙江省农垦天阳农机有限公司"
+        },
+        {
+            "en": "Contract Type:",
+            "zh": "合同类型:",
+            "data": "设备、材料采购"
+        },
+        {
+            "en": "Amout:",
+            "zh": "合同金额:",
+            "data": "5,337,700.00¥"
+        },
+        {
+            "en": "Org Name:",
+            "zh": "部门:",
+            "data": "成套工程七部"
+        },
+        {
+            "en": "Creator:",
+            "zh": "创建人:",
+            "data": "郭晓威"
+        }
+    ],
+    "routings": [
+        "2013-01-24 15:12, 郭晓威[成套工程二部]<提交>。", 
+        "2013-01-25 15:17, 项目经理审核，王石<通过>，具体意见是：同意", 
+        "2013-01-25 21:18, 部门经理审核，闫恺<通过>，具体意见是：同意"
+    ]
+}

@@ -1,10 +1,5 @@
 Thumbs.db
 .DS_Store
-mockup/themes/*.css
 /node_modules/
-/source/bower_components/
-/bower_components/
-/source/themes/
-/build/
-/.tmp/
-/.folder
+WebChat/
+*.css

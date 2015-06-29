@@ -1,0 +1,71 @@
+﻿@mixin border_half {
+    border-width: 1px;
+    border: 1px solid #dedede;
+    -webkit-border-image: url(images/icon_border_half.png) 2 stretch;
+}
+
+@mixin border_top_half {
+    border-width: 0;
+    border-top: 1px solid #dedede;
+    -webkit-border-image: url(images/icon_border_half.png) 2 stretch;
+}
+
+@mixin border_bottom_half {
+    border-width: 0;
+    border-bottom: 1px solid #dedede;
+    -webkit-border-image: url(images/icon_border_half.png) 2 stretch;
+}
+
+@mixin border_left_half {
+    border-width: 0;
+    border-left: 1px solid #dedede;
+    -webkit-border-image: url(images/icon_border_half.png) 2 stretch;
+}
+
+@mixin border_right_half {
+    border-width: 0;
+    border-right: 1px solid #dedede;
+    -webkit-border-image: url(images/icon_border_half.png) 2 stretch;
+}
+
+@mixin border_vertical_half {
+    border-width: 0;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    -webkit-border-image: url(images/icon_border_half.png) 2 stretch;
+}
+
+@mixin border_horizontal_half {
+    border-width: 0;
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    -webkit-border-image: url(images/icon_border_half.png) 2 stretch;
+}
+
+@mixin border_left_bottom_half {
+    border-width: 0;
+    border-left: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    -webkit-border-image: url(images/icon_border_half.png) 2 stretch;
+}
+
+@mixin border_right_bottom_half {
+    border-width: 0;
+    border-right: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    -webkit-border-image: url(images/icon_border_half.png) 2 stretch;
+}
+
+@mixin border_left_top_half {
+    border-width: 0;
+    border-top: 1px solid #dedede;
+    border-left: 1px solid #dedede;
+    -webkit-border-image: url(images/icon_border_half.png) 2 stretch;
+}
+
+@mixin border_right_top_half {
+    border-width: 0;
+    border-top: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    -webkit-border-image: url(images/icon_border_half.png) 2 stretch;
+}

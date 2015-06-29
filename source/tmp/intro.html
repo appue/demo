@@ -1,0 +1,38 @@
+<header class="header">
+    <div class="this_title">
+        <div></div>
+        <h1 ng-click="isShow=true;">{{currentName}}</h1>
+        <div></div>
+    </div>
+    <ul ng-show="isShow">
+        <li ng-repeat="(k, v) in DataList.SubTitle track by $index" ng-click="changePage(k)">
+            {{v.title}}
+        </li>
+    </ul>
+</header>
+
+<section class="mod_wrapper">
+    <ul class="mod_list_01">
+        <li ng-repeat="v in DataList.general.item track by $index">
+            <div>{{v.zh}}</div>
+            <div>{{v.data}}</div>
+        </li>
+    </ul>
+
+    <ul class="mod_list_02">
+        <li ng-repeat="v in DataList.routings.step track by $index">
+            {{v}}
+        </li>
+    </ul>
+</section>
+
+
+<footer class="footer">
+    <ul>
+        <li>同意</li>
+        <li>驳回</li>
+        <li>转办</li>
+        <li>沟通</li>
+        <li>更多...</li>
+    </ul>
+</footer>

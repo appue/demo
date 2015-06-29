@@ -1,0 +1,77 @@
+{
+    "lu": "CSalesContractJudge",
+    "key": "CONTRACT_JUDGE_NO=ZHTP201300082^REVISION=1^",
+    "line": "17",
+    "step": "80",
+    "title": "分包合同评审",
+    "general": [
+        {
+            "en": "Bid Amout:",
+            "zh": "拟中标价(万元):",
+            "data": "3,500.00¥"
+        },
+        {
+            "en": "Bid Date:",
+            "zh": "定标日期:",
+            "data": "2015-06-03"
+        },
+        {
+            "en": "Contract Amout:",
+            "zh": "合同金额(万元):",
+            "data": "3,500.00¥"
+        },
+        {
+            "en": "Contract Type:",
+            "zh": "合同类型:",
+            "data": "设备、材料采购"
+        },
+        {
+            "en": "Remain Amout:",
+            "zh": "采购节余(万元):",
+            "data": "700.00¥"
+        },
+        {
+            "en": "Available Amout:",
+            "zh": "可用备用金(万元):",
+            "data": "1,000.00¥"
+        }
+    ],
+    "detail": [
+        {
+            "en": "Cost Type:",
+            "zh": "成本类型:",
+            "data": "设备购置（含非标设计费）",
+            "hide": "1",
+            "content": [
+                {
+                    "en": "Forcast Amout:",
+                    "zh": "预算金额(万元):",
+                    "data": "1,000.00"
+                },
+                {
+                    "en": "Acture Amout:",
+                    "zh": "实际金额(万元):",
+                    "data": "1,000.00"
+                }
+            ]
+        }, 
+        {
+            "en": "Cost Type:",
+            "zh": "成本类型:",
+            "data": "土建工程",
+            "hide": "1",
+            "content": [
+                {
+                    "en": "Forcast Amout:",
+                    "zh": "预算金额(万元):",
+                    "data": "1,000.00"
+                },
+                {
+                    "en": "Acture Amout:",
+                    "zh": "实际金额(万元):",
+                    "data": "1,000.00"
+                }
+            ]
+        }
+    ]
+}

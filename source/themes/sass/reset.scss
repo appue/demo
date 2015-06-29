@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html {
+    height: 100%;
+}
+body{
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    font-family: Arial, "Lucida Grande", Verdana, "Microsoft YaHei";
+}
+img{
+    border: none;
+}
+a {
+    text-decoration: none;
+    outline: 0;
+    color: #333;
+}
+ol, ul, li {
+    list-style: none;
+}
+h1,h2,h3,h4 {
+    font-size: 14px;
+}
+body {
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+    background: #fff;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    font-family: Arial, "Lucida Grande", Verdana, "Microsoft YaHei";
+}
+.scrollfix {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+//文字超出显示...
+@mixin ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+//多行文字超出显示... 参数：line-clamp
+@mixin multi_ellipsis($line:3) {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.mod_wrapper {
+    padding-top: 55px;
+}
