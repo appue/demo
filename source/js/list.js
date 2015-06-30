@@ -1,8 +1,7 @@
 angular.module('wxSDK')
-.controller('tLogin', function (
+.controller('tList', function (
     $scope,
     $http,
     $state
 ){
-    $scope.currentName = "账号绑定";
 });

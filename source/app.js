@@ -11,6 +11,13 @@ angular.module('wxSDK', ['ui.router'])
         templateUrl: 'tmp/login.html',
         controller: 'tLogin'
     })
+
+    //代办事宜
+    .state('list', {
+        url: '/list.htm',
+        templateUrl: 'tmp/list.html',
+        controller: 'tList'
+    })
     
     .state('intro', {
         url: '/intro-{id}.htm',
