@@ -1,104 +1,30 @@
-.mod_list_01 {
-    border-bottom: 20px solid #eee;
-    li {
-        &:nth-child(1) {
-            @include border_vertical_half;
-        }
-        @include border_bottom_half;
-        display: -webkit-box;
-        div {
-            padding: 10px 5px;
-            &:nth-child(1) {
-                width: 100px;
-                @include border_right_half;
-            }
-            &:nth-child(2) {
-                // @include multi_ellipsis(1);
-                font-size: 12px;
-                color: #666;
-                -webkit-box-flex: 1;
-            }
-        }
-    }
-}
-
-
-.mod_list_02 {
-    li {
-        &:nth-child(1) {
-            @include border_vertical_half;
-        }
-        padding: 10px;
-        line-height: 20px;
-        color: #666;
-        font-weight: normal;
-        @include border_bottom_half;
-    }
-}
-
-.mod_list_03 {
-    border-bottom: 20px solid #eee;
-    li {
-        display: block;
-        padding: 10px;
-        @include border_bottom_half;
-        div {
+// 账号绑定
+.mod_login_input {
+    padding: 0 10px 10px;
+    ul {
+        @include border_half;
+        li {
+            line-height: 40px;
+            border-bottom: 0;
             display: -webkit-box;
-            p {
-                &:nth-child(1) {
-                    font-weight: bold;
-                    width: 150px;
-                }
-                &:nth-child(2) {
-                    -webkit-box-flex: 1;
-                }
-            }
-        }
-    }
-}
 
-
-.mod_detail {
-    dl {
-        dt {
-            line-height: 30px;
-            padding: 10px;
-            position: relative;
             @include border_bottom_half;
-            &:after {
-                content: "";
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            label {
                 display: block;
-                position: absolute;
-                right: 30px;
-                top: 20px;
-                width: 10px;
-                height: 10px;
-                vertical-align: middle;
-                border-left: 2px solid #fe8c00;
-                border-bottom: 2px solid #fe8c00;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-                -webkit-transform: rotate(-45deg);
+                width: 60px;
+                text-align: center;
             }
-            &.show:after {
-                top: 25px;
-                -webkit-transform: rotate(-225deg);
-            }
-        }
-        dd {
-            background: #f8f8f8;
-            display: -webkit-box;
-            @include border_bottom_half;
-            div {
-                width: 50%;
+            input {
+                display: block;
+                border: 0;
+                outline: none;
+                line-height: 40px;
                 -webkit-box-flex: 1;
-                padding: 10px;
-                &:nth-child(1) {
-                    @include border_right_half;
-                }
             }
-        }
+        } 
     }
 }
-
-

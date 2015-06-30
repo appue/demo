@@ -1,0 +1,19 @@
+// 按钮样式
+@mixin button($width:100%, $height:34px, $bgcolor:$yellow, $color:#fff) {
+    display: block;
+    width: $width;
+    line-height: $height;
+    background: $bgcolor;
+    color: $color;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.mod_btn_01 {
+    @include button(auto);
+    margin: 0 10px;
+    -webkit-box-sizing: border-box;
+}
