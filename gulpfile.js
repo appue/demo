@@ -1,10 +1,16 @@
-var gulp = require('gulp'),
-    watch = require('gulp-watch'),
-    connect = require('gulp-connect'),
-    plumber = require('gulp-plumber'),
+var gulp       = require('gulp'),
+    watch      = require('gulp-watch'),
+    connect    = require('gulp-connect'),
+    plumber    = require('gulp-plumber'),
+    inject     = require('gulp-inject'),
     livereload = require('gulp-livereload'),
-    sass = require('gulp-sass');
+    sass       = require('gulp-sass');
 
+gulp.task('inject', function () {
+    return gulp.src('./source/index.html')
+        .pipe(inject(gulp.src('./source/js/**/*.js', {read: false}), {relative: true}))
+        .pipe(gulp.dest('./source/'));
+});
 
 gulp.task('sass', function() {
     return gulp.src('./source/themes/*.scss')
