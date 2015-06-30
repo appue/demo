@@ -4,8 +4,10 @@
     top: 0;
     height: 44px;
     width: 100%;
-    background: $yellow;
+    // background: $yellow;
+    background: -webkit-linear-gradient(top, $yellow, #ffc925);
     color: #fff;
+    z-index: 100;
 
     .this_title {
         height: 44px;
