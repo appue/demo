@@ -1,6 +1,6 @@
 <header class="header">
     <div class="this_title">
-        <div></div>
+        <div page-back></div>
         <h1>代办事宜</h1>
         <div></div>
     </div>
@@ -8,7 +8,7 @@
 
 <section class="mod_wrapper" style="padding-bottom:50px;">
     <div class="mod_list">
-        <a href="">
+        <a ui-sref="detail({id: 1})">
             <div>
                 <i>类型：</i>
                 <article>
@@ -29,7 +29,7 @@
                 </article>
             </div>
         </a>
-        <a href="">
+        <a ui-sref="detail({id: 2})">
             <div>
                 <i>类型：</i>
                 <article>
@@ -50,7 +50,7 @@
                 </article>
             </div>
         </a>
-        <a href="">
+        <a ui-sref="detail({id: 3})">
             <div>
                 <i>类型：</i>
                 <article>
@@ -71,7 +71,7 @@
                 </article>
             </div>
         </a>
-        <a href="">
+        <a ui-sref="detail({id: 4})">
             <div>
                 <i>类型：</i>
                 <article>
@@ -92,7 +92,7 @@
                 </article>
             </div>
         </a>
-        <a href="">
+        <a ui-sref="detail({id: 5})">
             <div>
                 <i>类型：</i>
                 <article>
@@ -113,7 +113,7 @@
                 </article>
             </div>
         </a>
-        <a href="">
+        <a ui-sref="detail({id: 6})">
             <div>
                 <i>类型：</i>
                 <article>
@@ -134,7 +134,7 @@
                 </article>
             </div>
         </a>
-        <a href="">
+        <a ui-sref="detail({id: 7})">
             <div>
                 <i>类型：</i>
                 <article>
@@ -155,7 +155,7 @@
                 </article>
             </div>
         </a>
-        <a href="">
+        <a ui-sref="detail({id: 8})">
             <div>
                 <i>类型：</i>
                 <article>
@@ -180,19 +180,19 @@
 </section>
 
 <ul class="list_bottom_menu">
-    <li>
+    <li ng-class="{ current : Deploy.currentTab == 1 }">
         <i></i>
         审批
     </li>
-    <li>
+    <li ng-class="{ current : Deploy.currentTab == 2 }">
         <i></i>
         通知
     </li>
-    <li class="current">
+    <li ng-class="{ current : Deploy.currentTab == 3 }">
         <i></i><span></span>
         阅读
     </li>
-    <li>
+    <li ng-class="{ current : Deploy.currentTab == 4 }">
         <i></i>
         全部
     </li>

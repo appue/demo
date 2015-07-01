@@ -4,25 +4,7 @@ angular.module('wxSDK')
     $http,
     $state
 ){
-    $scope.DataList = {
-        ListMenu: [
-            {
-                Id: 1,
-                Title: "概述"
-            },
-            {
-                Id: 2,
-                Title: "采购包明细"
-            }
-        ]
-    };
-
-    $scope.Deploy = {
-        showMenu: false,
-        showMore: false,
-        currentTitle: "概述",
-        currentId: 1
-    };
+    $scope.DataList = {};
 
     $scope.goBack = function () {
         $state.go('intro', {id: 1});
@@ -47,6 +29,15 @@ angular.module('wxSDK')
                 }
             });
         });
+
+
+        $scope.DataList.SubTitle = [
+            {
+                title: "概述"
+            }
+        ];
+        
+        $scope.currentName = "采购包明细";
     }).error(function(){
 
     });

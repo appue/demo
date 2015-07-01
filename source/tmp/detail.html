@@ -1,20 +1,80 @@
 <header class="header">
     <div class="this_title">
-        <div ng-click="goBack()"></div>
-        <h1 ng-click="isShow=true;">{{currentName}}</h1>
-        <div></div>
+        <div page-back></div>
+        <h1 class="list" ng-click="Deploy.showMenu=!Deploy.showMenu;">
+            {{currentTitle}}
+        </h1>
     </div>
-    <ul ng-show="isShow">
-        <li ng-repeat="(k, v) in DataList.SubTitle track by $index" ng-click="changePage(k)">
-            {{v.title}}
-        </li>
+
+    <ul ng-show="Deploy.showMenu">
+        <li ng-repeat="(k, v) in DataList.ListMenu track by $index" ng-click="Deploy.showMenu=!Deploy.showMenu;Deploy.currentTitle=v.Title;Deploy.currentId=v.Id">{{v.Title}}</li>
     </ul>
 </header>
 
-<section class="mod_wrapper">
+<section class="mod_wrapper" style="padding-bottom:60px;" ng-if="Deploy.currentId == 1">
+    <ul class="mod_list_01">
+        <li><div>拟中标价(万元):</div><div>3,500.00¥</div></li>
+        <li><div>定标日期: </div><div>2015-06-03</div></li>
+        <li><div>合同金额(万元): </div><div>3,500.00¥</div></li>
+        <li><div>合同类型: </div><div>设备、材料采购</div></li>
+        <li><div>采购节余(万元): </div><div>700.00¥</div></li>
+        <li><div>可用备用金(万元): </div><div>1,000.00¥</div></li>
+    </ul>
+
+    <ul class="mod_list_02">
+        <li>2013-05-17 10:29, 项目经理审核，系统管理员<通过>，具体意见是：邮件通知同意，管理员跳转。</li>
+        <li>2013-05-17 10:50, 部门经理审核，周军宏<通过>，具体意见是：同意</li>
+        <li>2013-05-17 11:12, 财务部评审，赵利君<通过>，具体意见是：同意。</li>
+        <li>2013-05-17 13:38, 法律部评审，汤宏伟<通过>，具体意见是：同意。</li>
+        <li>2013-05-17 15:57, 工程管理部评审，马彦东<通过>，具体意见是：同意。</li>
+        <li>2013-05-17 16:40, 会审_技术支持部_部门总经理，洪浩<通过>，具体意见是：同意。</li>
+        <li>2013-05-17 16:49, 会审_财务部_部门总经理，黄建洲<通过>，具体意见是：同意。</li>
+        <li>2013-05-17 17:17, 会审_法律部_部门副总经理，黄锋<通过>，具体意见是：同意</li>
+        <li>2013-05-18 14:16, 会审_工程管理部_部门总经理，潘旭龙<通过>，具体意见是：同意。</li>
+        <li>2013-05-18 19:41, 公司领导会审_公司总法律顾问，张丹<通过>，具体意见是：同意</li>
+        <li>2013-05-20 08:48, 公司领导会审_公司财务总监，王惠芳<通过>，具体意见是：同意。</li>
+        <li>2013-05-20 10:35, 公司领导会审_公司副总经理，陈育芳<通过>，具体意见是：同意</li>
+        <li>2013-05-20 11:32, 公司主管经理审批，沈蔚<通过>，具体意见是：同意</li>
+    </ul>
+</section>
+
+<section class="mod_wrapper" style="padding-bottom:60px;" ng-if="Deploy.currentId == 2">
     <ul class="mod_list_03">
-        <li ng-repeat="v in DataList.general.item track by $index">
-            <div><p>{{v.zh}}</p><p>{{v.data}}</p></div>
+        <li>
+            <div>
+                <p>合同名称:</p>
+                <p>安哥拉卡玛库巴农场项目犁、茎干粉碎机、整地机和播种机设备采购合同</p>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>项目名称:</p>
+                <p>安哥拉卡玛库巴综合农场项目</p>
+            </div>
+            <div>
+                <p>供应商名称:</p>
+                <p>黑龙江省农垦天阳农机有限公司</p>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>合同类型:</p>
+                <p>设备、材料采购</p>
+            </div>
+            <div>
+                <p>合同金额:</p>
+                <p>5,337,700.00¥</p>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>部门:</p>
+                <p>成套工程七部</p>
+            </div>
+            <div>
+                <p>创建人:</p>
+                <p>郭晓威</p>
+            </div>
         </li>
     </ul>
 
@@ -34,12 +94,30 @@
 </section>
 
 
-<footer class="footer">
-    <ul>
-        <li>同意</li>
-        <li>驳回</li>
-        <li>转办</li>
-        <li>沟通</li>
-        <li>更多...</li>
+<footer class="detail_bottom_menu">
+    <ul class="this_menu">
+        <li ng-class="{current : Deploy.currentTab == 1 }" ng-click="Deploy.currentTab=1;Deploy.showMore=false;">
+            审批
+        </li>
+        <li ng-class="{current : Deploy.currentTab == 2 }" ng-click="Deploy.currentTab=2;Deploy.showMore=false;">
+            驳回
+        </li>
+        <li ng-class="{current : Deploy.currentTab == 3 }" ng-click="Deploy.currentTab=3;Deploy.showMore=false;">
+            转办
+        </li>
+        <li ng-class="{current : Deploy.currentTab == 4 }" ng-click="Deploy.currentTab=4;Deploy.showMore=false;">
+            沟通
+        </li>
+        <li ng-class="{current : Deploy.currentTab == 5 }" ng-click="Deploy.currentTab=5;Deploy.showMore=!Deploy.showMore;">
+            更多
+        </li>
     </ul>
+
+    <ul class="this_list" ng-if="Deploy.showMore">
+        <li>废弃</li>
+        <li>重新提交</li>
+        <li>沟通意见</li>
+        <li>阅读</li>
+        <li>附件</li>
+    <ul>
 </footer>

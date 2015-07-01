@@ -54,14 +54,20 @@
         top: 40px;
         z-index: 3;
         margin-left: -50px;
-        background: rgba(0, 0, 0, .9);
+        background: rgba(255, 255, 255, 1);
+        -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,.1);
+        @include border_half;
         li {
             line-height: 40px;
             font-size: 14px;
             font-weight: normal;
             text-indent: 10px;
             cursor: pointer;
+            color: #000;
             @include border_bottom_half;
+            &:last-child {
+                border-bottom: 0;
+            }
         }
     }
 }
