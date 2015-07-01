@@ -24,16 +24,11 @@ angular.module('wxSDK')
         currentId: 1
     };
 
-    $scope.goBack = function () {
-        $state.go('intro', {id: 1});
-    };
-    
-    var config = {
+    $http({
         method: 'GET',
         url: 'api/submit2.json'
-    }
-
-    $http(config).success(function(res){
+    })
+    .success(function(res){
         angular.extend($scope.DataList, res.data);
 
         angular.forEach($scope.DataList.detail.line, function (v, k) {
@@ -47,14 +42,12 @@ angular.module('wxSDK')
                 }
             });
         });
-    }).error(function(){
+    })
+    .error(function(){
 
     });
 
-    $scope.changePage = function (key) {
-        $scope.isShow = false;
-        $state.go('intro', {id: 1});
-    };
+    
 
     $scope.changeShow = function () {
         if ($scope.last && $scope.last != this.k+1) {

@@ -18,12 +18,6 @@ angular.module('wxSDK', ['ui.router'])
         templateUrl: 'tmp/list.html',
         controller: 'tList'
     })
-    //代办事宜
-    .state('intro', {
-        url: '/intro-{id}.htm',
-        templateUrl: 'tmp/intro.html',
-        controller: 'tList'
-    })
 
     //详细信息
     .state('detail', {
