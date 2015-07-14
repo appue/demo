@@ -40,7 +40,9 @@ body {
     -webkit-text-size-adjust: none;
     font-family: Arial, "Lucida Grande", Verdana, "Microsoft YaHei";
 }
-.scrollfix {
+
+
+@mixin scrollfix {
     position: absolute;
     top: 0;
     right: 0;

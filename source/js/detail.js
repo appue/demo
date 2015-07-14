@@ -56,4 +56,9 @@ angular.module('wxSDK')
         $scope.last = this.k + 1;
         $scope.DataList.detail.line[this.k].show = !$scope.DataList.detail.line[this.k].show;
     };
+
+
+    $scope.changeTab = function () {
+        
+    };
 });

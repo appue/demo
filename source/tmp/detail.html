@@ -13,13 +13,37 @@
 </header>
 
 <section class="mod_wrapper" style="padding-bottom:60px;" ng-if="Deploy.currentId == 1">
-    <ul class="mod_list_01">
-        <li><div>拟中标价(万元):</div><div>3,500.00¥</div></li>
-        <li><div>定标日期: </div><div>2015-06-03</div></li>
-        <li><div>合同金额(万元): </div><div>3,500.00¥</div></li>
-        <li><div>合同类型: </div><div>设备、材料采购</div></li>
-        <li><div>采购节余(万元): </div><div>700.00¥</div></li>
-        <li><div>可用备用金(万元): </div><div>1,000.00¥</div></li>
+    <ul class="mod_list_03">
+        <li>
+            <div>
+                <p>拟中标价(万元):</p>
+                <p>3,500.00¥</p>
+            </div>
+            <div>
+                <p>定标日期: </p>
+                <p>2015-06-03</p>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>合同金额(万元): </p>
+                <p>3,500.00¥</p>
+            </div>
+            <div>
+                <p>合同类型: </p>
+                <p>设备、材料采购</p>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>采购节余(万元): </p>
+                <p>700.00¥</p>
+            </div>
+            <div>
+                <p>可用备用金(万元): </p>
+                <p>1,000.00¥</p>
+            </div>
+        </li>
     </ul>
 
     <ul class="mod_list_02">
@@ -92,6 +116,58 @@
             </dd>
         </dl>
     </div>
+</section>
+
+
+
+<section class="mod_filter">
+    <dl>
+        <dt>
+            <div>取消</div>
+            <div>清空</div>
+            <div>确定</div>
+        </dt>
+        <dd ng-init="currentFilter = 1">
+            <div class="this_tab">
+                <div ng-click="currentFilter = 1" ng-class="{ current: currentFilter == 1 }">意见</div>
+                <div ng-click="currentFilter = 2" ng-class="{ current: currentFilter == 2 }">节点</div>
+            </div>
+            <div class="this_content">
+                <div class="this_wrapper">
+                    <div class="this_textarea" ng-if="currentFilter == 1">
+                        <textarea placeholder="请输入您的意见"></textarea>
+                    </div>
+                    <ul class="this_checkbox" ng-if="currentFilter == 2">
+                        <li>
+                            <div>审核管理</div>
+                            <div>驳回人</div>
+                            <div>驳回</div>
+                        </li>
+                        <li>
+                            <div>提交</div>
+                            <div>提交人名</div>
+                            <div><input type="checkbox" /></div>
+                        </li>
+                        <li>
+                            <div>项目经理</div>
+                            <div>提交人名</div>
+                            <div><input type="checkbox" /></div>
+                        </li>
+                        <li>
+                            <div>预算工程师</div>
+                            <div>提交人名</div>
+                            <div><input type="checkbox" /></div>
+                        </li>
+                        <li>
+                            <div>部门经理</div>
+                            <div>提交人名</div>
+                            <div><input type="checkbox" /></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </dd>
+    </dl>
 </section>
 
 
