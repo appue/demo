@@ -25,4 +25,6 @@ angular.module('wxSDK', ['ui.router'])
         templateUrl: 'tmp/detail.html',
         controller: 'tDetail'
     });
+
+    $urlRouterProvider.otherwise('/login.htm');
 });

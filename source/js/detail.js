@@ -21,6 +21,7 @@ angular.module('wxSDK')
         showMenu: false,
         showMore: false,
         currentTitle: "概述",
+        showFilter: true,
         currentId: 1
     };
 
@@ -59,6 +60,6 @@ angular.module('wxSDK')
 
 
     $scope.changeTab = function () {
-        
+
     };
 });

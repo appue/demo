@@ -1,1 +1,3 @@
-# yejs
+gulp
+
+gulp minjs
