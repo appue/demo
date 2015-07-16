@@ -173,19 +173,19 @@
 
 <footer class="detail_bottom_menu">
     <ul class="this_menu">
-        <li ng-class="{current : Deploy.currentTab == 1 }" ng-click="Deploy.currentTab=1;Deploy.showMore=false;">
+        <li ng-class="{current : Deploy.currentTab == 1 }" ng-click="changeMenu(1)">
             审批
         </li>
-        <li ng-class="{current : Deploy.currentTab == 2 }" ng-click="Deploy.currentTab=2;Deploy.showMore=false;">
+        <li ng-class="{current : Deploy.currentTab == 2 }" ng-click="changeMenu(2)">
             驳回
         </li>
-        <li ng-class="{current : Deploy.currentTab == 3 }" ng-click="Deploy.currentTab=3;Deploy.showMore=false;">
+        <li ng-class="{current : Deploy.currentTab == 3 }" ng-click="changeMenu(3)">
             转办
         </li>
-        <li ng-class="{current : Deploy.currentTab == 4 }" ng-click="Deploy.currentTab=4;Deploy.showMore=false;">
+        <li ng-class="{current : Deploy.currentTab == 4 }" ng-click="changeMenu(4)">
             沟通
         </li>
-        <li ng-class="{current : Deploy.currentTab == 5 }" ng-click="Deploy.currentTab=5;Deploy.showMore=!Deploy.showMore;">
+        <li ng-class="{current : Deploy.currentTab == 5 }" ng-click="Deploy.currentTab=5;Deploy.showMore=!Deploy.showMore;Deploy.showFilter=false;">
             更多
         </li>
     </ul>
