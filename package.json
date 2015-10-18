@@ -1,0 +1,47 @@
+{
+  "name": "yejsApp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "yejsApp",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-bower": "0.0.10",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-connect": "^2.2.0",
+    "gulp-html-replace": "^1.4.5",
+    "gulp-ignore": "^1.2.1",
+    "gulp-inject": "^1.2.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-minify-css": "^1.1.0",
+    "gulp-minify-html": "^1.0.2",
+    "gulp-ng-annotate": "^0.5.3",
+    "gulp-ng-html2js": "^0.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-replace": "^0.5.3",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-sass": "^1.3.3",
+    "gulp-shell": "^0.4.1",
+    "gulp-size": "^1.2.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp-watch": "^4.2.4",
+    "yargs": "^3.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appue/chtml.git"
+  },
+  "author": "appue",
+  "bugs": {
+    "url": "https://github.com/appue/chtml/issues"
+  },
+  "homepage": "https://github.com/appue/chtml"
+}

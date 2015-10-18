@@ -1,6 +1,12 @@
+#windows
 Thumbs.db
+
+#mac
 .DS_Store
+
+
 /node_modules/
-WebChat/
-*.css
-build/
+/build/
+/.tmp/
+/.folder
+source/themes/all.css
