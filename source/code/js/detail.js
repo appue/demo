@@ -1,4 +1,5 @@
 angular.module('wxSDK')
+
 .controller('tDetail', function (
     $scope,
     $http,
@@ -48,28 +49,6 @@ angular.module('wxSDK')
             });
         }
     });
-    // $http({
-    //     method: 'GET',
-    //     url: 'api/submit2.json'
-    // })
-    // .success(function(res){
-    //     angular.extend($scope.DataList, res.data);
-
-    //     angular.forEach($scope.DataList.detail.line, function (v, k) {
-    //         v.info = [];
-    //         angular.forEach(v.item, function (i, j) {
-    //             if (j > 0) {
-    //                 if (i.hide) {
-    //                     v.show = false;
-    //                 }
-    //                 v.info.push(i);
-    //             }
-    //         });
-    //     });
-    // })
-    // .error(function(){
-
-    // });
 
     
 

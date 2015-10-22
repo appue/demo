@@ -1,4 +1,5 @@
 angular.module('wxSDK')
+
 .controller('tLogin', function (
     $scope,
     $state,

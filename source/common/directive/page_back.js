@@ -1,4 +1,5 @@
 angular.module('wxSDK')
+
 .directive('pageBack', function (
     $window,
     $state,
