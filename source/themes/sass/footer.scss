@@ -7,7 +7,8 @@
     width: 100%;
     height: 50px;
     ul {
-        display: -webkit-box;
+        // display: -webkit-box;
+        @include box();
         li {
             line-height: 50px;
             color: #fff;

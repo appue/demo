@@ -8,9 +8,10 @@
     dl {
         dt {
             background: rgba(254, 140, 0, 0.92);
-            display: -webkit-box;
+            // display: -webkit-box;
             line-height: 40px;
-            -webkit-box-pack: justify;
+            // -webkit-box-pack: justify;
+            @include box($pack: justify);
             div {
                 width: 60px;
                 text-align: center;
@@ -20,7 +21,8 @@
         dd {
             height: 210px;
             background: #fff;
-            display: -webkit-box;
+            // display: -webkit-box;
+            @include box();
             .this_tab {
                 background: #eee;
                 width: 60px;
@@ -47,12 +49,12 @@
                         padding: 10px;
                         outline: none;
                         -webkit-box-sizing: border-box;
-                        @include border_half;
+                        @include border-half($type: all);
                     }
                     .this_checkbox {
                         width: 100%;
                         li {
-                            @include border_bottom_half;
+                            @include border-half($type: bottom);
                             display: -webkit-box;
                             &:first-child {
                                 font-weight: bold;
@@ -72,8 +74,8 @@
                                     width: 40px;
                                     text-align: center;
                                     input {
-                                        @include border_half;
-                                        -webkit-border-radius: 0;
+                                        @include border-half($type: all);
+                                        @include border-radius(0);
                                     }
                                 }
                             }

@@ -11,14 +11,14 @@
         <ul>
             <li>
                 <label>账号</label>
-                <input type="text" placeholder="用户名" value="" />
+                <input type="text" ng-model="tInput.UserName" placeholder="用户名" value="" />
             </li>
             <li>
                 <label>密码</label>
-                <input type="password" placeholder="请输入密码" value="" />
+                <input type="password" ng-model="tInput.Password" placeholder="请输入密码" value="" />
             </li>
         </ul>
     </div>
 
-    <a class="mod_btn_01" ui-sref="list({ type: 1, id: 2 })">绑定</a>
+    <a class="mod_btn_01" ng-click="setLogin()">登录</a>
 </section>

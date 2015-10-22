@@ -2,13 +2,14 @@
 .mod_login_input {
     padding: 0 10px 10px;
     ul {
-        @include border_half;
+        @include border-half($type: all);
         li {
             line-height: 40px;
             border-bottom: 0;
-            display: -webkit-box;
-
-            @include border_bottom_half;
+            // display: -webkit-box;
+            @include box();
+            @include border-half($type: bottom);
+            
             &:last-child {
                 border-bottom: 0;
             }

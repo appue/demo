@@ -1,0 +1,81 @@
+@mixin border-radius ($radius: 5px) {
+    -webkit-border-radius: $radius;
+            border-radius: $radius;
+}
+
+@mixin box-sizing ($type: border-box) {
+    -webkit-box-sizing: $type;
+            box-sizing: $type;
+}
+
+@mixin overflow-scroll ($top: 0, $left: 0) {
+    position: absolute;
+    left: $left;
+    top: $top;
+    width: 100%;
+    height: 100%;
+
+    @include box-sizing();
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@mixin last-no () {
+    &:last-child {
+        border: 0;
+        -webkit-border-image: none;
+    }
+}
+
+
+//文字超出显示...
+@mixin ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+//多行文字超出显示... 参数：line-clamp
+@mixin multi-ellipsis($line: 3) {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+
+@mixin bottom-shadow () {
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+}
+
+
+//width + height 
+@mixin width-height ($wh) {
+    width: $wh;
+    height: $wh;
+}
+
+//height + line-height
+@mixin height-line ($height) {
+    height: $height;
+    line-height: $height;
+}
+
+
+@mixin box(
+    $align: "",
+    $pack: ""
+){
+    display: -webkit-box;
+
+    @if $align {
+        -webkit-box-align: $align;
+    }
+
+    @if $pack {
+        -webkit-box-pack: $pack;
+    }
+}

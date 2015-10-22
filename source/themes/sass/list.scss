@@ -2,11 +2,11 @@
     padding: 0 10px 10px;
     a {
         display: block;
-        @include border_bottom_half;
+        @include border-half($type: bottom);
         padding: 5px 20px 5px 0;
         position: relative;
         &:first-child {
-            @include border_vertical_half;
+            @include border-half($type: y);
         }
         &:after {
             position: absolute;
@@ -23,7 +23,8 @@
             -webkit-transform: rotate(45deg);
         }
         div {
-            display: -webkit-box;
+            // display: -webkit-box;
+            @include box();
             i,
             article {
                 display: block;
@@ -47,8 +48,10 @@
     height: 50px;
     z-index: 100;
     width: 100%;
-    display: -webkit-box;
+    // display: -webkit-box;
     background: rgba(254, 140, 0, 0.9);
+    @include box();
+    
     li {
         width: 0;
         color: #fff;

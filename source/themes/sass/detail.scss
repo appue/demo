@@ -2,15 +2,15 @@
     border-bottom: 20px solid #eee;
     li {
         &:nth-child(1) {
-            @include border_vertical_half;
+            @include border-half($type: y);
         }
-        @include border_bottom_half;
-        display: -webkit-box;
+        @include border-half($type: bottom);
+        @include box();
         div {
             padding: 10px 5px;
             &:nth-child(1) {
                 width: 130px;
-                @include border_right_half;
+                @include border-half($type: right);
             }
             &:nth-child(2) {
                 // @include multi_ellipsis(1);
@@ -26,13 +26,13 @@
 .mod_list_02 {
     li {
         &:nth-child(1) {
-            @include border_vertical_half;
+            @include border-half($type: y);
         }
         padding: 10px;
         line-height: 20px;
         color: #666;
         font-weight: normal;
-        @include border_bottom_half;
+        @include border-half($type: bottom);
     }
 }
 
@@ -40,10 +40,11 @@
     border-bottom: 10px solid #eee;
     li {
         display: block;
-        display: -webkit-box;
-        @include border_bottom_half;
+        // display: -webkit-box;
+        @include box();
+        @include border-half($type: all);
         &:first-child {
-            @include border_vertical_half;
+            @include border-half($type: y);
         }
         div {
             padding: 10px;
@@ -56,7 +57,7 @@
                 }
             }
             &:nth-child(2) {
-                @include border_left_half;
+                @include border-half($type: left);
             }
         }
     }
@@ -69,9 +70,9 @@
             line-height: 30px;
             padding: 10px;
             position: relative;
-            @include border_bottom_half;
+            @include border-half($type: all);
             &:first-child {
-                @include border_vertical_half;
+                @include border-half($type: y);
             }
             &:after {
                 content: "";
@@ -95,14 +96,15 @@
         }
         dd {
             background: #f8f8f8;
-            display: -webkit-box;
-            @include border_bottom_half;
+            // display: -webkit-box;
+            @include box();
+            @include border-half($type: all);
             div {
                 width: 50%;
                 -webkit-box-flex: 1;
                 padding: 10px;
                 &:nth-child(1) {
-                    @include border_right_half;
+                    @include border-half($type: right);
                 }
             }
         }
@@ -122,7 +124,8 @@
 
     .this_menu {
         height: 50px;
-        display: -webkit-box;
+        // display: -webkit-box;
+        @include box();
         li {
             width: 0;
             color: #fff;
@@ -170,7 +173,7 @@
             line-height: 40px;
             padding: 0 20px;
             color: #fff;
-            @include border_bottom_half;
+            @include border-half($type: bottom);
         }
     }
 }
