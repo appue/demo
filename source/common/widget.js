@@ -7,14 +7,10 @@ angular.module('wxSDK')
     $compile,
     $timeout,
     $location,
-    $rootScope,
-    $cacheFactory,
-
-    cachePool
+    $rootScope
 ) {
 
-    var toastTimer = null,
-        dataPool = $cacheFactory('dataPool');
+    var toastTimer = null;
 
     var tPackage = {
         /**
@@ -50,22 +46,7 @@ angular.module('wxSDK')
             if (!params) return;
 
             var $scope = params.scope || '',
-                postOpt = params.data || {},
-                obj = {
-                    Header: {
-                        UserId: '',
-                        Auth: ''
-                    }
-                };
-                // UserInfo = cachePool.pull('UserInfo');
-
-            if ($rootScope.UserInfo && $rootScope.UserInfo.UserId) {
-                obj.Header.UserId = $rootScope.UserInfo.UserId;
-                obj.Header.Auth = $rootScope.UserInfo.Auth;
-            }
-
-            postOpt = angular.extend({}, postOpt, obj);
-            //--数据改造加用户信息end
+                postOpt = params.data || {};
 
             var options = {
                     success: function() {}, //--成功回调
